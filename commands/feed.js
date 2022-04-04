@@ -6,6 +6,8 @@ const {
   Discord
 } = require('discord.js');
 const fs = require('fs');
+const nekoClient = require('nekos.life');
+let neko = new nekoClient();
 const axios = require('axios')
 
 
@@ -13,13 +15,12 @@ module.exports = {
   name: "feed",
   description: "Get a image of a feed",
   run: async (client, interaction) => {
-    axios.get('https://nekos.life/api/v2/img/feed').then((res) => {
+    let img = (await neko.sfw.feed()).url;
+
         const embed = new MessageEmbed()
-        .setImage(res.data.url)
-        .setColor('BLUE')
-        .setTimestamp()
-        .setFooter('Random Feed')
+        .setColor('0x2F3136')
+        .setImage(img)
+
         interaction.reply({ embeds: [embed] })
-    })
   },
 };

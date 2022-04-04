@@ -7,19 +7,19 @@ const {
 } = require('discord.js');
 const fs = require('fs');
 const axios = require('axios')
-
+const nekoClient = require('nekos.life');
+let neko = new nekoClient();
 
 module.exports = {
   name: "hug",
   description: "Get a image of a hug",
   run: async (client, interaction) => {
-    axios.get('https://nekos.life/api/v2/img/hug').then((res) => {
+    let img = (await neko.sfw.hug()).url;
+
         const embed = new MessageEmbed()
-        .setImage(res.data.url)
-        .setColor('BLUE')
-        .setTimestamp()
-        .setFooter('Random Hug')
+        .setColor('0x2F3136')
+        .setImage(img)
+
         interaction.reply({ embeds: [embed] })
-    })
   },
 };

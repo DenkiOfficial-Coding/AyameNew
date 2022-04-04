@@ -7,19 +7,19 @@ const {
 } = require('discord.js');
 const fs = require('fs');
 const axios = require('axios')
-
+const nekoClient = require('nekos.life');
+let neko = new nekoClient();
 
 module.exports = {
   name: "holo",
   description: "Get a image of a holo",
   run: async (client, interaction) => {
-    axios.get('https://nekos.life/api/v2/img/holo').then((res) => {
+    let img = (await neko.sfw.holo()).url;
+
         const embed = new MessageEmbed()
-        .setImage(res.data.url)
-        .setColor('BLUE')
-        .setTimestamp()
-        .setFooter('Random Holo')
+        .setColor('0x2F3136')
+        .setImage(img)
+
         interaction.reply({ embeds: [embed] })
-    })
   },
 };

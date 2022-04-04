@@ -7,19 +7,20 @@ const {
 } = require('discord.js');
 const fs = require('fs');
 const axios = require('axios')
+const nekoClient = require('nekos.life');
+let neko = new nekoClient();
 
 
 module.exports = {
   name: "smug",
   description: "Get a image of a smug",
   run: async (client, interaction) => {
-    axios.get('https://nekos.life/api/v2/img/smug').then((res) => {
+    let img = (await neko.sfw.smug()).url;
+
         const embed = new MessageEmbed()
-        .setImage(res.data.url)
-        .setColor('BLUE')
-        .setTimestamp()
-        .setFooter('Random Smug')
+        .setColor('0x2F3136')
+        .setImage(img)
+
         interaction.reply({ embeds: [embed] })
-    })
   },
 };
