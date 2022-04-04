@@ -15,7 +15,7 @@ module.exports = {
         let djs = require('discord.js').version;
         let botversion = require('../package.json').version;
         let server = client.guilds.cache.size;
-        let user = client.users.cache.size;
+        let user = client.guilds.cache.reduce((a, b) => a + b.memberCount, 0);
         let channel = client.channels.cache.size;
 
         let statsembed = new MessageEmbed()

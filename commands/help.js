@@ -12,16 +12,14 @@ module.exports = {
 
     let helpembed = new MessageEmbed()
     helpembed.setColor("RANDOM")
-      helpembed.setAuthor(
-          `Commands of ${client.user.username}`
-        )
+      helpembed.setAuthor({ name: `Commands of ${client.user.username}`, iconURL: client.user.avatarURL() })
       helpembed.setColor("#2f3136")
       helpembed.setThumbnail("https://cdn.discordapp.com/attachments/956850904311664673/960016245208514560/ayame.gif")
       helpembed.addField(
         `<a:cmc_bonk:949563152398426132> <a:cmc_muiten:949219236004388884> **COMMANDS LIST** <a:SU_muiten2:960076330865680414> <a:cmc_bonk:949563152398426132>`,
-        "`start`,`end`,`reroll`,`drop`,`anime`,`hentai`,`random-anime`,`pussy`,`trap`,`baka`,`cat`,`cuddle`,`dog`,`feed`,`foxgirl`,`gecg`,`goose`,`holo`,`hug`,`kemonomimi`,`kiss`,`lizard`,`meow`,`neko`,`pat`,`poke`,`slap`,`smug`,`tickle`,`start`,`ưaifu`,`wallpaper`,`woof`,`help`,`ping`,`stats`,`server`,`shorts`,`invite`,`avatar`,`joke`,`meme`",
+        `${client.commands.map(c => `${c.name}`).join("\n")}`,
       );
-      helpembed.setFooter(`Ayame Version 2`);
+      helpembed.setFooter({text: `Ayame Version 2`});
 
       const row = new MessageActionRow().addComponents(
 				new MessageButton()
