@@ -17,7 +17,7 @@ module.exports = {
           `Vote List`,
           `[Top.gg]()
           [Infinity Bot List](https://infinitybots.gg/bots/958701287493496902)
-          [Void Bot]()`
+          [Void Bot](https://voidbots.net/bot/958701287493496902)`
           )
       .setFooter(`Ayame Version 2`);
 
