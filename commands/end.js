@@ -15,7 +15,7 @@ module.exports = {
         // If the member doesn't have enough permissions
         if(!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")){
             return interaction.reply({
-                content: '<a:X_:959372562498981898> Bạn cần có perm quản lý tin nhắn để tạo giveaway',
+                content: '<a:X_:959372562498981898> You need manage message to manage giveaway',
                 ephemeral: true
             });
         }
@@ -32,14 +32,14 @@ module.exports = {
         // If no giveaway was found
         if (!giveaway) {
             return interaction.reply({
-                content: 'Không tìm thấy giveaway của `'+ query + '`.',
+                content: 'Didnt find giveaway of`'+ query + '`.',
                 ephemeral: true
             });
         }
 
         if (giveaway.ended) {
             return interaction.reply({
-                content: 'Giveaway này đã kết thúc',
+                content: 'Giveaway is end',
                 ephemeral: true
             });
         }
@@ -49,7 +49,7 @@ module.exports = {
         // Success message
         .then(() => {
             // Success message
-            interaction.reply('Kết thúc giveaway');
+            interaction.reply('Ended giveaway');
         })
         .catch((e) => {
             interaction.reply({

@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "ping",
-  description: "Xem độ trễ",
+  description: "API Ping",
   run: async (client, interaction) => {
     // If the member doesn't have enough permissions
     if (!interaction.member.permissions.has("SEND_MESSAGES")) {

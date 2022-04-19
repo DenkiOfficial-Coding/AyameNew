@@ -3,12 +3,12 @@ const HuyAPI = require("huyapi");
 const image = new HuyAPI("i4ZJKBLGeLOU"); 
 
 module.exports = {
-    name: 'meme',
-    description: 'Random Meme',
+    name: 'sad',
+    description: 'Random Sad',
 
     run: async (client, interaction) => {
 
-        const data = await image.meme()
+        const data = await image.sad()
         
         const embed = new MessageEmbed()
         .setColor("RANDOM")

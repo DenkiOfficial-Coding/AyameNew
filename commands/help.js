@@ -21,13 +21,11 @@ module.exports = {
         `<a:cmc_bonk:949563152398426132> <a:cmc_muiten:949219236004388884> **COMMANDS LIST** <a:SU_muiten2:960076330865680414> <a:cmc_bonk:949563152398426132>`,
         `🎉 Giveaway
         - drop, end, start, reroll
-        📷 SFW
-        - baka, cat, cuddle, dog, feed, foxgirl, gecg, goose, wallpaper, slap, tickle
-        - waifu, woof, lizard, meow, neko, nekogif, pat, poke, holo, hug, kiss, smug
+        📷 Image
+        - animewallpaper, baka, bite, boy, cat, clap, dance, die, dog, girl, hug, handhold
+        - kill, kiss, megumin, meme, punch, sad, shinobu, shot, smile, waifu, highfive
         🤷‍♂️ Infomation
-        - avatar, bug-report, stats, ping, server, short, help, invite
-        🔞 NSFW
-        - boobs, classic, cumsluts, trap, hentai, kemonomimi, kuni, lesbian, pussy, random-anime`,
+        - avatar, bug-report, stats, ping, server, help, invite, api-list, vote`,
       );
       helpembed.setFooter(`Ayame Version 2`);
 

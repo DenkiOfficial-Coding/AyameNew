@@ -4,7 +4,7 @@ const feroms = require('fero-ms');
 
 module.exports = {
    name: 'stats',
-   description: 'Thông số',
+   description: 'About Stats',
    run: async(client, interaction) => {
       let uptime = client.uptime;
         let shortUptime = feroms.ms(uptime);
@@ -41,7 +41,7 @@ module.exports = {
             },
             {
                 name: 'Bot Version',
-                value: `\`v${botversion}\``,
+                value: `v2 beta`,
                 inline: true
             },
             {

@@ -1,25 +1,21 @@
-const messages = require("../utils/messages");
-const {
-	MessageEmbed,
-	MessageActionRow,
-	MessageButton,
-  Discord
-} = require('discord.js');
-const fs = require('fs');
-const axios = require('axios')
-const nekoClient = require('nekos.life');
-let neko = new nekoClient();
+const { MessageEmbed } = require('discord.js')
+const HuyAPI = require("huyapi");
+const image = new HuyAPI("i4ZJKBLGeLOU"); 
 
 module.exports = {
-  name: "hug",
-  description: "Get a image of a hug",
-  run: async (client, interaction) => {
-    let img = (await neko.sfw.hug()).url;
+    name: 'hug',
+    description: 'Random Hug',
 
+    run: async (client, interaction) => {
+
+        const data = await image.hug()
+        
         const embed = new MessageEmbed()
-        .setColor('0x2F3136')
-        .setImage(img)
+        .setColor("RANDOM")
+        .setImage(`${data.url}`)
+        .setTimestamp()
+        .setFooter(`Shared by ${data.author}`)
 
         interaction.reply({ embeds: [embed] })
-  },
-};
+    }
+}
