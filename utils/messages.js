@@ -6,7 +6,7 @@ module.exports = {
     inviteToParticipate: "React with 🎉 to participate!",
     dropMessage: "Be the first to react with 🎉 !",
     drawing: 'Drawing: {timestamp}',
-    winMessage: "Congratulations, {winners}! You won **{this.prize}**!",
+    winMessage: "Congratulations, {winners}! You won **{this.prize}**! Hosted by {this.hostedBy}",
     embedFooter: "Giveaways",
     noWinner: "Giveaway cancelled, no valid participations.",
     hostedBy: "Hosted by: {this.hostedBy}",
