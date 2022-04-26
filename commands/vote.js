@@ -15,7 +15,7 @@ module.exports = {
       .setColor("RANDOM")
       .addField(
           `Vote List`,
-          `[Top.gg]()
+          `[Top.gg](https://top.gg/bot/958701287493496902)
           [Infinity Bot List](https://infinitybots.gg/bots/958701287493496902)
           [Void Bot](https://voidbots.net/bot/958701287493496902)`
           )
